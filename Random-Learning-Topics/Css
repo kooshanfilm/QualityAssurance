@@ -1,0 +1,391 @@
+
+Border Radius
+
+The border-radius property is the shorthand property for:
+
+
+.box {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+}
+So, instead of writing each declaration, we can simply use the border-radius property to define the curve of each corner:
+
+
+.box {
+  border-radius: 20px 10px 20px 10px;
+}
+The top-left and bottom-right values are the same, and the top-right and bottom-left value are as well. So we can shorten this further:
+
+
+.box {
+  border-radius: 20px 10px;
+}
+If we want to set an even border-radius for each side, we'll simply need to define one value:
+
+
+.box {
+  border-radius: 20px;
+}
+Text Shadows and Box shadows
+
+Quick Reference
+
+
+The text-shadow property accepts three length unit values followed by a color value:
+
+
+h1 {
+  text-shadow: 2px 2px 1px #222;
+}
+The first value sets the horizontal offset of the shadow. The second value sets the vertical offset. The third is an optional value that sets the blur radius of the shadow. The fourth value is the color value.
+
+
+
+
+
+
+Box Shadows
+The order of values for box-shadow is exactly like the order of values for the text-shadow property:
+
+
+.wildlife {
+  box-shadow: 15px 15px 10px 20px rgba(0, 0, 0, .8);
+}
+The first value sets the horizontal offset of the shadow. The second value sets the vertical offset. The last value sets the color of the box shadow.
+
+
+The optional third value defines the blur radius in a box shadow. The optional fourth value defines the spread distance of a box shadow.
+
+
+Inner shadows
+By default, box shadows are created as drop shadows outside of the element. To create an inner shadow, we can add the keyword value inset:
+
+
+.wildlife {
+  box-shadow: inset 0 0 50px 10px rgba(0, 0, 0, 1);
+}
+Border
+
+border-width
+Sets the width of a border.
+
+
+border-style
+Sets the style of the element’s borders.
+
+
+border-color
+Sets the color of a border.
+
+
+border
+Shorthand property for setting the individual border property values in one place.
+Padding Reference
+
+Padding Reference
+
+
+We can define values for padding as any length or a percentage unit. There are two ways we can set the values for padding. The first way is setting each property individually:
+
+
+.wildlife {
+  padding-top: 100px;
+  padding-right: 120px;
+  padding-bottom: 50px;
+  padding-left:  20px;
+}
+We can also use the shorthand property for padding, which lets us set the padding on all four sides in one declaration:
+
+
+.wildlife {
+  padding: 100px 120px 50px 20px;
+}
+The order of the values is: Top, Right, Bottom, Left. Think clockwise.
+The CSS Box Model
+
+
+Quiz 3
+
+1.Which selector targets every element on the page at once and applies the styles we set?
+
+
+2.When targeting an element with a type selector?
+—We use the element’s html tag as the selector
+
+
+3.Do IDs have browser functionality?
+yes we can use ids as fragment identifiers that create anchors in a page
+
+
+4.create a new rule that removes the underline from all unvisited links on the page.
+a:link {
+
+  text-decoration: none;
+
+}
+
+
+
+
+
+
+Text Styles/Font style
+
+text-align
+Let's us control the horizontal alignment of text.
+
+
+text-transform
+Changes the case of text – whether it's uppercase, lowercase, or capitalized.
+
+
+text-decoration
+Sets the line decoration of elements. We'll commonly use this property to remove underlines in links.
+
+
+font-weight
+Sets how thick or thin the characters are displayed.
+
+
+---
+CSS font stacks are prioritized lists of fonts that the browser will cycle through until it finds a font that is installed on the user’s system.
+
+
+font-family
+Defines a typeface for our text.
+
+
+font-style
+Allows italic or oblique faces to be selected within a font family.
+
+Em Units/size
+
+Using em units
+
+
+If we set our body's font-size value to 1em:
+
+
+body {
+  font-size: 1em;
+}
+This is equivalent to setting the font-size value to:
+
+
+body {
+  font-size: 16px;
+}
+Converting pixels to ems
+
+
+To convert a px value to its equivalent em value, we can follow a simple formula: divide an element’s px value by the parent element's font-size value.
+
+
+For example:
+
+
+.intro {
+  font-size: 24px;
+}
+To convert the font-size value of intro to an em value, we'll need to divide 24 by the parent element's font-size. In this case, the parent element is the body element, which has the font-size set to 1em, or 16px.
+
+
+24/16 = 1.5
+This gives us an em-based font-size value of:
+
+
+.intro {
+  font-size: 1.5em;  /* 24px/16px */
+}
+Using pseudo-classes /more about links
+
+Using pseudo-classes
+
+
+Think of a pseudo-class as a keyword we add to a selector to style a special state of an element.
+
+
+The :link pseudo-class targets links that have not been visited by the user:
+
+
+a:link {
+  color: orange;
+}
+
+
+The :visited pseudo-class targets links that have been visited –– or clicked –– by the user:
+
+
+a:visited {
+  color: lightblue;
+}
+The :hover pseudo-class targets an element when a user hovers over it:
+
+
+a:hover {
+  color: forestgreen;
+}
+The :active pseudo-class gets applied when an element is in an active state:
+
+
+a:active {
+  color: lightcoral;
+}
+The :focus pseudo-class is only applied to interactive elements like links, buttons and form elements. The styles are applied as soon as the element receives focus:
+
+
+a:focus {
+  color: white;
+  background-color: orange;
+}
+Descendant selectors
+
+CSS lets us target elements based on their relationship in the HTML document. We can combine selectors to create descendant selectors that target elements that are descendants of an element. This makes our selectors more specific.
+
+
+Examples of descendant selectors
+
+
+To create a descendant selector, we’ll need to use two or more selectors separated by whitespace:
+
+
+.main-header span {
+  font-size: 26px;
+}
+
+
+ul li {
+  margin-bottom: 12px;
+}
+Reusing classes
+
+
+
+
+
+At times, we may have a lot of repeated CSS in our style sheets. So it's best to create classes for the repeated styles.
+
+
+Space-separate each class name in the class attribute:
+
+
+<div class="primary-content t-border rounded">
+Then, target each class in the style sheet:
+
+
+.primary-content {
+  background: grey;
+}
+.t-border {
+  border-top: 1px solid;
+}
+.rounded {
+  border-radius: 10px;
+}
+quiz2
+
+Give the header element a class attribute. Then, set the class value to main-header.
+    <header class="main-header">
+--
+In the style sheet, target main-header with a class selector. Then, add a background-color property and set the value to orange.
+
+
+.main-header{
+background-color:orange;
+}
+--
+
+Class Selectors , select by .
+
+Class selectors let us target elements based on their class attribute. The main difference between a class and an ID selector is that IDs are unique and they’re used to identify one element on the page, whereas a class can target more than one element.
+
+
+Using class selectors
+
+
+Class selectors are defined with the . character followed by the class name.
+
+
+.primary-content {
+  background: grey;
+}
+
+
+<div class=“primary-content">
+Using ID selectors,# to select the id
+
+
+
+
+
+ID selectors are declared using the pound (#) symbol, followed by the ID name.
+
+
+#primary-content {
+  background: grey;
+}
+This selector will match the HTML element that has an ID attribute with the value primary-content.
+
+
+IDs are unique to the page, so an element can only have one ID and a page can only have one element with the same ID name.
+
+
+ <div id="primiary-contet">
+</div>
+
+Universal Selector
+
+The universal selector targets every element on the page at once and applies the styles we set.
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+This universal selector will apply the margin and padding styles to every element on the page.
+Quiz 1
+
+1.We write inline styles directly inside an element's tag using the ??? attribute.
+2.Which method allows us to bring one or more style sheets into another style sheet?@import
+3.What are the three methods for adding CSS to a page?
+
+
+Using @import to import a CSS
+
+Using @import
+
+
+@import 'reset-styles.css';
+The @import statement must precede all other CSS rules in a style sheet in order for it to work properly.
+Linking to an external style sheet
+
+<link rel="stylesheet" href="css/style.css">
+
+
+The rel attribute specifies the relationship between the HTML document and the linked document
+The href attribute points to the location of the CSS file.
+Inline Styles/Internal Styles
+
+Inline Styles
+
+
+When we write inline styles, we write the CSS in the HTML file, directly inside an element's tag using a style attribute.
+
+
+<body style="background-color: orange;">
+
+
+Internal Styles
+
+
+Internal styles are embedded in the <head> section of the HTML document and are defined inside a <style> tag.
+
+
+<style>
+  p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>

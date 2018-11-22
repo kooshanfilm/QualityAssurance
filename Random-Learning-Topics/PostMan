@@ -1,0 +1,16 @@
+
+How to write a test in postman:
+Sample API for this:
+	postman-echo.com/get
+	go to the tests section:
+		test1:
+			tests["response time is less than 200 ms"] = responseTime < 200;
+
+		test2:
+			var jsonData = JSON.parse(responseBody);
+			tests["Error in Application"] = jsonData.url == "https://postman-echo.com/get";
+
+
+
+
+

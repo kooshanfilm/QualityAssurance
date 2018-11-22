@@ -1,0 +1,61 @@
+How to record all
+
+go to chrome and download all the requests
+go to https://flood.io/har2jmx and convert HAR to JMX
+open the file in Jmeter
+
+-What is performance testing
+     -Performance testing is all about creating a load and measuring the response time
+     -two types of performance testing :
+          -backend
+          -the whole user experience
+
+-note that adding a listener will impact the results of the test for huge number of users
+-when you request to API or webpage,it doesn’t matter its same it still a HTTP request
+     -however you can request other than HTPP like Soap request or use another plugin for you Jmeter
+-Another good tool to test the load test blazemeeter:
+     -5000 users,you’re not able to test it in your machine
+     -with blazemeeter you can do that
+-You can use Jmeter to test a Mobile app
+
+-
+
+Number of threreads :
+     -is the maximum number of user you’re going to test with
+Ramp-up period:
+     -for example if the number of threads is 20 and the ramp- period is 40
+     -then in over period of 40 second then ramp 20 users
+loop count :
+     -how many times going throw this test
+
+-How accurate is using Jmeter
+     -for example you hit the server with 2000 user or thread in single Jmeter machine
+     -in this case the cpu usage is 100% and that makes the process slower
+     -so if you don’t hit the 100% cpu usage then its accurate
+
+-Assertions:
+     -assertions allow you to add logic to what you expect to happened and if what you expect to happened didn’t happened then raise an error
+     -This assertion could be base on the response time
+     -this also could be base on the content of the response
+
+-Remeber to all ways have cache manager on
+     -You have ability to turn off the cache off so every request is a new request
+-Constant throughout timer
+     -gives a ability to limit number of hit per ex. minuets
+     -In other words it will add a delay
+
+-Latency:
+     -how long took the first bite to respond
+
+-There are two types of testing :
+     -what is the breaking point of backend
+     -mostly should design the test the way that real customer use the web
+
+-Remember JM is calculating the exact time of loading the whole page
+
+
+
+If controller :
+     -you can add a simple logic like if the response was something
+     -then do something
+     -So only if its true then make the child request

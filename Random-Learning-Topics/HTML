@@ -1,0 +1,635 @@
+
+All about HTTP
+
+The address http://food.com is what we call a URL-a uniform resource locator.It represents a specific resource on the web. In this case, the resource is the home page of the food.com website.
+In HTTP, there are two different roles: server and client. In general, the client always initiates the conversation; the server replies. HTTP is text based; that is, messages are essentially bits of text, although the message body can also contain other media. Text usage makes it easy to monitor an HTTP exchange.
+background image
+
+   Author: kooshanfilm@hotmail.com
+background-image
+Sets one or several background images for an element.
+
+
+background-size
+Sets the size of a background image.
+
+
+background-repeat
+Controls whether or not the image is tiled and how it gets tiled both vertically and horizontally. The value repeat-y repeats the image vertically, while repeat-x repeats the background image horizontally.
+Anchors
+
+   Author: kooshanfilm@hotmail.com
+<!doctype html>
+
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>My Page </title>
+
+
+    </head>
+    <body>
+         <a href="#down" id="up">My link </a>
+
+
+
+ </br>
+         <p id="down"> This is link take us here,wanna g<a href="#up" >o up</a> </p>
+
+
+    </body>
+
+
+</html>
+Emphasis, Strong, and Horizontal Rules
+
+   Author: kooshanfilm@hotmail.com
+<!doctype html>
+
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>My Page </title>
+
+
+    </head>
+    <body>
+
+
+    <h1>
+    this is a level 1 headline.
+    </h1>
+        <p>
+        This is just a paragraph.
+        </p>
+        <p>
+        <!-- <em> tag will make this italic -->
+        This is <em>italic</em> a paragraph.
+        </p>
+        <p>
+        <!-- <strong> will make this bold -->
+        This is <strong>This should be strog</strong> a paragraph.
+        </p>
+         <!-- <hr>this is a horisental line -->
+        <hr>
+        <p>
+        This is This should be strog a paragraph.
+        </hr>
+        </p>
+
+
+
+
+    </body>
+
+
+</html>
+TeamTreeHouse
+
+   Author: kooshanfilm@hotmail.com
+Ajax = A syncrise javascript and xml
+
+   Author: kooshanfilm@hotmail.com
+before use to transer file by ajax but now sending as Json
+Host
+
+each IP can have different host names so when we sending a request to the server we mention the hostname too
+
+
+if you need to SSL to the website you need to have a unique IP
+Fixed positioning
+
+Perfect! See? This positioning stuff's not so hard.
+Finally, fixed positioning anchors an element to the browser window—you can think of it as gluing the element to the screen. If you scroll up and down, the fixed element stays put even as other elements scroll past.
+Static by default
+
+Now that you understand positioning elements withfloat, let's move on to slightly more complex positioning methods.
+If you don't specify an element's positioning type, it defaults to static. This just means "where the element would normally go." If you don't tell an element how to position itself, it just plunks itself down in the document.
+Clearing elements
+
+Unfortunately, we sometimes mix large floating elements with non-floating ones, and elements do end up on top of each other.
+See your footer (the blue bit between the two columns)? It's stuck back there because we haven't told it something very important: to clear the other elements on the page!
+If you tell an element to clear: left, it will immediately move below any floating elements on the left side of the page; it can also clear elements on theright. If you tell it to clear: both, it will get out of the way of elements floating on the left and right!
+The syntax is what you're used to:
+element{
+    clear:/*right, left, or both*/}
+Float for two
+
+div {
+     height: 300px;
+     width: 300px;
+     border: 2px solid black;
+     border-radius: 5px;
+     background-color: #308014;
+     /*Add your CSS here!*/
+     float:right;
+
+}
+
+
+p {
+     font-family: Verdana, sans-serif;
+     font-size: 20px;
+     width: 280px;
+     /*Add your CSS here!*/
+     float:left;
+}
+Floats
+
+One way is to use floats. When you float an element on the page, you're telling the webpage: "I'm about to tell you where to put this element, but you have to put it into the flow of other elements." This means that if you have several elements all floating, they all know the others are there and don't land on top of each other.
+You can think of the HTML page as sort of like a sea, and floating elements as boats on it: all the boats have positions on the sea, and they all see and steer clear of each other.
+(Some of the positioning methods we'll learn in upcoming sections canaccidentally drop elements on top of each other.)
+Padding
+
+Good! Let's adjust the padding. Remember, the padding is the space between your border and your innermost layer: the actual content.
+Padding can be set in two ways, just like your margins. You can either select them individually, like this:
+padding-top: /*some value*/
+padding-right: /*some value*/
+padding-bottom: /*some value*/
+padding-left: /*some-value*/
+Or select them all in one declaration, like this:
+padding: valuevaluevaluevalue;
+
+
+You should also know that if you want your padding to be the same for all four sides, you can declare that value only once. padding: 10px will give your HTML element 10 pixels of padding on all sides.
+
+
+div {
+    border:1px solid black;
+    background-color:#CC0000;
+    margin-top:10px;
+    margin-right:5px;
+    margin-bottom:5px;
+    margin-left:50px;
+    padding-top:0px;
+    padding-right:30px;
+    padding-bottom:0px;
+    padding-left:10px;
+
+Margin top, right, bottom, left
+
+If you want to specify a particular margin, you can do it like this:
+margin-top: /*some value*/
+margin-right: /*some value*/
+margin-bottom: /*some value*/
+margin-left: /*some-value*/
+You can also set an element's margins all at once: you just start from the top margin and go around clockwise (going from top to right to bottom to left). For instance,
+margin: 1px 2px 3px 4px;
+will set a top margin of 1 pixel, a right margin of 2, a bottom of 3, and a left of 4.
+Margin
+
+Let's start with our margins. Adjusting our margins not only moves our element relative to other elements on the page, but also relative to the "walls" of the HTML document.
+For instance, if we take an HTML element with a specific width (such as our <div]] >  in the editor) and set itsmargin to auto, this tells the document to automatically put equal left and right margins on our element, centering it on the page.
+None!
+
+The good news is, inline places all your elements on a single line. The bad news is that it doesn't maintain their "box"ness: as you saw, all your <div]] > s got squished to the smallest possible width!
+The inline display value is better suited for HTML elements that are blocks by default, such as headers and paragraphs.
+Finally, we'll try out the display valuenone. As you might expect, this prevents the page from displaying the selected element. As you might notexpect, this removes the selected element from the page entirely, including any children and any content. Poof! Gone! (But not gone forever—changing the display value away fromnone will bring everything back.)
+Inline
+
+The inline-block value allows you to put several block elements on the same line. The inline value places all your elements next to one another, but not as blocks: they don't keep their dimensions.
+Inline-block
+
+Our<div]] > s were block elements by default; as we specify different display values, they'll start to move around.
+As mentioned, any element that comes in as a block (say, a paragraph) will automatically take up the full width of the page, no matter how much or how little content you put in.
+If we specify a display of inline-block, however, our blocks are still blocks, but will be able to sit next to each other on the same line
+
+
+Example
+
+
+div{
+     display:inline-block;
+}
+
+CSS box model
+
+As we mentioned, elements populate the page in what's known as the CSS box model. Each HTML element is like a tiny box or container that holds the pictures and text you specify.
+Nth child
+
+Well done! You can actually select any child of an element after the first child with the pseudo-class selector nth-child; you just add the child's number in parentheses after the pseudo-class selector. For example,
+p:nth-child(2){
+    color: red;}
+Would turn every paragraph that is thesecond child of its parent element red.
+The element that is the child goes before:nth-child; its parent element is the element that contains it.
+pseudo-class selector
+
+A pseudo-class selector is a way of accessing HTML items that aren't part of the document tree (remember the tree structure we talked about earlier?). For instance, it's very easy to see where a link is in the tree. But where would you find information about whether a link had been clicked on or not? It isn't there!
+Pseudo-class selectors let us style these kinds of changes in our HTML document. For example, we saw we could change a link's text-decoration property to make it something other than blue and underlined. Using pseudo selectors, you can control the appearance of unvisited and visited links—even links the user is hovering over but hasn't clicked!
+The CSS syntax for pseudo selectors is
+selector:pseudo-class_selector{
+    property: value;}
+
+
+It's just that little extra colon (:).
+
+
+Example :
+
+
+a:hover {
+     color: #cc0000;
+     font-weight: bold;
+     text-decoration: none;
+}
+
+
+
+
+There are a number of useful pseudo-class selectors for links, including:
+a:link: An unvisited link.
+
+
+
+a:visited: A visited link.
+
+
+
+a:hover: A link you're hovering your mouse over.
+
+
+Example :
+
+
+a{
+    text-decoration: none;
+    color:#008B45;
+}
+
+
+a:hover{
+    color:#00FF00;
+}
+
+
+a:visited{
+    color:#EE9A00;
+}
+
+ID
+
+IDs, on the other hand, are great for when you have exactly one element that should receive a certain kind of styling.
+IDs are assigned to HTML elements with the word id and an equals sign:
+<divid="first"]]
+>
+</div]]
+>
+<divid="second"]]
+>
+</div]]
+>
+<pid="intro"]]
+>
+</p]]
+>
+IDs are identified in CSS with a pound sign (#):
+#first{
+    height:50px;}#second{
+    height:100px;}#intro{
+    color:#FF0000;}
+This allows you to apply style to a single instance of a selector, rather than allinstances.
+Class
+
+Classes are useful when you have a bunch of elements that should all receive the same styling. Rather than applying the same rules to several selectors, you can simply apply the same class to all those HTML elements, then define the styling for that class in the CSS tab.
+Classes are assigned to HTML elements with the word class and an equals sign, like so:
+<divclass="square"]]
+>
+</div]]
+>
+<imgclass="square"/><tdclass="square"]]
+>
+</td]]
+>
+Classes are identified in CSS with a dot (.), like so:
+.square{
+    height:100px;width:100px;}
+This allows you to take elements of different types and give them the same styling.
+Branching
+
+You can think of an HTML document as a tree: elements "branch out" from the main trunk (the <html]] > </html]] >  tags). The first two big branches are <head]] > and <body]] > , and branches multiply and become finer as you get to elements like <div]] > s, <table]] > s, and text (headers and paragraphs).
+
+If you think of the <html]] >  tag as the trunk of the tree, you can think of its immediate branches—<head]] >  and<body]] > —as its children. Both tags are children of <html]] > , and <html]] >  is their parent element. Because they are both immediate children of <html]] > (that is, they are both only one element away), they are siblings.
+<!DOCTYPE html>
+<html> <!--The trunk of the tree!-->
+     <head> <!--Child of html, parent of title,
+             sibling of body-->
+          <title></title> <!--Immediate child of head,
+                              child of head AND html-->
+     </head>
+     <body> <!--Child of html, parent of p,
+             sibling of head-->
+          <p></p> <!--Immediate child of body,
+                    child of body AND html-->
+     </body>
+</html>
+the * selector
+
+There's also a very special selector you can use to apply CSS styling to every element on the page: the * selector. For example, if you type
+* {
+    border:2px solid black;}
+You'll create a two-pixel wide solid black border around every element on the HTML page.
+Multiple Selectors
+
+As you've seen, it's possible to nest HTML elements inside one another, like so:
+<div]]
+>
+<div]]
+>
+<p]]
+>
+I like tacos!</p]]
+>
+So what if you want to grab <p]] > s that are inside two <div]] > s, and not all<p]] > s?
+You select those in the CSS tab like this:
+divdivp {
+    /*CSS stuff!*/
+}
+border-radius
+
+
+
+This involves a new property calledborder-radius. (We'll learn more about it in later courses and projects.) This property modifies the corners of HTML objects; it's how you get those cool rounded buttons!
+
+
+on the css file
+change your border radius to 5px
+
+
+You may have guessed this, but if not, we'll say it outright: any HTML element can be a CSS selector! You can modify<ul]] > s, <table]] > s, and even the entire<body]] >  by selecting ul, table, andbody, respectively.
+
+
+
+Backup values
+
+You don't have to jump straight to a default value like cursive or sans-serif: you can tell CSS to try several, going from one to the next if the one you want isn't available.
+For example, if you write:
+p{
+    font-family: Tahoma, Verdana, sans-serif;}
+CSS will first try to apply Tahoma to your paragraphs. If the user's computer doesn't have that font, it will try Verdana next, and if that doesn't work, it will show a default sans-serif font.
+Color commentary
+
+While it's important to get all your syntax down correctly, it's also a good idea to write comments as you go along. Good comments will help remind you why you did something a certain way (or will help someone else out if they're reading your code without you there to explain it).
+As you've seen, HTML comments look like this:
+<!--I'm a comment!-->
+CSS comments, on the other hand, look like this:
+/*I'm a comment!*/
+Remember: the computer doesn't look at comments when figuring out what your HTML and CSS should do, but writing good comments is a good habit you want to pick up!
+One selector, many properties
+
+Another cool advantage of CSS is that you can set many properties for one selector. For instance, if you want to set a paragraph's font, font color, and font size, you can simply write:
+p{
+    font-family: Arial;color: blue;font-size:24px;}
+
+
+Remember: end each property-value pair with a semicolon!
+
+
+h3{
+    color:red;
+}
+p{
+    font-family:Courier;
+}
+
+
+span{
+    background-color:yellow;
+}
+
+
+
+Syntax for the wintax
+
+CSS syntax is different from the HTML you're used to, but don't worry: it's easy to pick up! The general format looks like this:
+selector{
+    property: value;}
+A selector can be any HTML element, such as <p]] > , <img]] > , or <table]] > . You just take off the <>s! To make a paragraph's text red with CSS, you'd type:
+p{
+    color: red;}
+A property is an aspect of a selector. For instance, you can change thefont-family, color, and font-sizeof the text on your web pages (in addition to many more).
+A value is a possible setting for a property. color can be red, blue, black, or almost any color; font-family can be a whole bunch of different fonts; and so on.
+You need to end each property-value with a semi-colon (;). That's how CSS knows you're done with one pair and ready for the next.
+Self-closing tags
+
+This brings us to a quick (but noteworthy!) concept in HTML: theself-closing tag.
+Because nothing ever goes between<link]] > </link]] >  tags, it's okay to use a single set of <>s to be the openingand closing tags. You do that like so:
+<linktype="text/css"rel="stylesheet"href="CSS file address"/>
+You may have noticed us do something similar with the <img]] >  tag:
+<imgsrc="web address"/>
+Most tags are not self-closing, but we'll point out the self-closing ones to help save you time and typing.
+Link it up!
+
+You know you should write your CSS in a totally separate file. But how do you make sure your HTML file can see that CSS information?
+You do this by putting a <link]] >  tag (as you saw in the first exercise of this course) between the <head]] > ...</head]] >  tags of your HTML page. Your<link]] >  tag needs three attributes:
+A type attribute that should always be equal to "text/css"
+A rel attribute that should always be equal to "stylesheet"
+A href attribute that should point to the web address of your CSS file
+
+
+In the editor to the right, you'll see two files: index.html andstylesheet.css.
+
+
+like:
+
+
+     <link type="text/css" rel="stylesheet" href="stylesheet.css">
+
+CSS
+
+<span>blue</span>!</p>
+
+
+span {
+     /*Write your CSS here!*/
+     color :blue;
+     font-family:cursive;
+}
+Create a table with images
+
+         <table>
+         <thead><th>You Will get one </th></thead>
+             <tbody>
+                 <tr><td><img src="google.ca"</td><td><img src="google.ca"</td><td><img src="google.ca"</td></tr>
+                  <tr><td><img src="google.ca"</td><td><img src="google.ca"</td><td><img src="google.ca"</td></tr>
+                   <tr><td><img src="google.ca"</td><td><img src="google.ca"</td><td><img src="google.ca"</td></tr>
+             </tbody>
+         </table>
+     </body>
+Span
+
+While <div]] >  allows you to divide your webpage up into pieces you can style individually, <span]] >  allows you to control styling for smaller parts of your page, such as text. For example, if you always want the first word of your paragraphs to be red, you can wrap each first word in <span]] > </span]] > tags and make them red using CSS!
+
+     <p>This text is black, except for the word <span style="color:red">red!</span></p>
+Font:
+<p>My favorite font is <span style="font-family:Arial">Impact!</span></p>
+Link Div Tag
+
+     <a href="google.ca"     <div style="width:50px; height:50px; background-color:yellow"></div></a>
+     </body>
+'Div'ide and conquer
+
+One of the most versatile structure tags available to you is the <div]] > </div]] >  tag. Short for "division," <div]] > allows you to divide your page into containers (that is, different pieces). This will come in handy when you begin learning CSS in the next unit: you'll be able to style different parts of your website individually!
+
+          <div style="width:50px;height:50pc;background-color:yellow"></div>
+Table Heads
+
+First we have an opening <thead]] > tag for the table head.
+Then we have an opening <tr]] >  tag for the row. (to start the row)
+After that, a <th]] > </th]] >  cell for the Name column heading. Notice that we use <th]] > </th]] >  for the table heading cells instead of<td]] > </td]] > .
+Then another <th]] > </th]] >  cell for the Favorite Color column heading.
+Finally, we close the row element with a closing </tr]] >  tag, and close out the table heading element with a closing </thead]] >  tag.
+Table with border
+
+—Tr==table row
+—TD=Table Data
+
+
+   <table border="1px">
+            <tr>
+                <td>One</td>
+            </tr>
+                <td>Two</td>
+
+            <tr>
+                <td>three</td>
+            </tr>
+
+Table
+
+We use the <tr]] >  tag to create a table row
+italicize words
+
+          <p>Hey, don't say <em>that</em>!</p>
+Strong words!
+
+          <p>Do you hear the people <strong>sing?</strong></p>
+Aligning the text
+
+          <h3 style="text-align:center">Favorite Football Teams</h3>
+Background color
+
+We can use the style attribute again, and set it equal to "background-color: red”
+
+     <body style="background-color:red">
+Font family
+
+First we wrote <h1]] > Big title</h1]] >
+Then inside the opening <h1> tag, we added a style attribute, and set it equal to"font-family: Arial".
+     <li style="font-size:16px; font-family: Arial">This item is big Arial.</li>
+Font color
+
+What if you want to change the colorand the size of the text? Simple! Just add a semi-colon between each bit. For example:
+
+<p style="color:red ;font-size:10px">A giant bear and a little duck were friends.</p>
+Font size
+
+We can give tags more instructions by including attributes in the opening tag. An attribute is simply a characteristic or some description for the content in the element. You saw this with src in <img]] >  and href in<a]] > .
+
+     <p style="font-size:20px"> Some text for you to make normal size!</p>
+Making comments
+
+<!--Make me into a comment.-->
+Unordered lists
+
+         <ul>
+             <li>list1</li>
+             <li>list1</li>
+         </ul>
+Ordered lists
+
+     <ol>
+               <li>Raindrops on roses</li>
+               <li>Whiskers on kittens</li>
+               <li>Bright copper kettles</li>
+               <li>Warm woolen mittens</li>
+          </ol>
+Click that image
+
+<ahref="http://www.codecademy.com/"><imgsrc="http://s3.amazonaws.com/codecademy-blog/assets/f3a16fb6.jpg"/></a]]
+>
+Tags
+
+<P> tag
+n HTML, paragraphs are described by paragraph elements, or p elements.
+Example:
+<p>Rent from people in over 34,000 cities and 192 countries.</p>
+<a> tag
+The defining feature of the Web is the presence of links. Clicking on links leads to other web pages. The a element is used to create links.
+Example:
+<a href="https://www.airbnb.com/locations"> Learn More</a>
+<img> tag
+In addition to headings and paragraphs, a web page can have images. The img element is used to add images to a page.
+Example:
+
+<img src="http://goo.gl/mbnqBl.”>
+
+
+UL and LI > bulleted list
+
+
+example <ul>
+<li> Home </li>
+<li> About </li>
+
+
+     <strong>Alerf</strong>
+HTTP Status Codes
+
+Typical HTTP responses for a simple API on an application with authentication will generally fall within the following 4 status codes:
+* 200: OK – Basically self-explanitory, the request went okay.
+* 401: Unauthorized – Authentication credentials were invalid.
+* 403: Forbidden – The resource requested is not accessible – in a Rails app, this would generally be based on permissions.
+* 404: Not Found – The resource doesn’t exist on the server.
+Wrap with a div
+
+A div element groups other elements together into sections of the web page, such as a navigation bar, the main body, and the footer.
+The outer <div class="nav"]] > ..</div]] >  groups the elements into the navigation bar section of the web page. The inner <divclass="container"]] > ..</div]] >  wraps the contents in a container. We'll use both classes in the next section to style the navigation bar.
+
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+
+     <div class=nav>
+     <div class=container>
+     <ul>
+       <li>mike</li>
+       <li>browse</li>
+     </ul>
+
+     <ul>
+         <li>Sign Up</li>
+
+     </ul>
+     </div>
+     </div>
+
+  </body>
+</html>
+HTML and Body
+
+Here's an example of a real web page:
+Everything inside a web page is nested inside the html element
+The body element contains the actual content of the web page - everything nested inside<body> and </body> shows up in the web browser
+The doctype at the start of the HTML file tells the browser which version of HTML you are using. The doctype is not an HTML element, so it doesn't have a closing tag. The doctype ensures that your web page displays consistently when its visited from different browsers.
+Heading elements
+
+Headings are described by heading elements. There are six levels of heading elements: h1 to h6.
+The h1 element is used to describe the main heading of the page.
+<h1>Web Development </h1>
+
+Naming Your Document
+
+ We first want to give our document a name. For that, you use the<title]] >  and </title> tags to set it.
+Whatever you put between the <title>tags will go in the menu bar of the browser window.
+
+
+
+<html>
+    <head>
+        <title>HTML - One O' One</title>
+    </head>
+</html>

@@ -1,0 +1,103 @@
+Char and Varchar
+
+Char: You specify the fixed length as part of the type definition: CHAR(10)
+
+VARCHER:require you to specify the maximum possible length of a string that could be stored in that column VARCHAR(99)
+
+when you create a table in SQL choose one column to be your primary key
+for example with the users table :UserName or UserIDNumber
+Also you can have a joint primary key >> which is the combination of two columns
+
+INSERT,SELECT,UPDATE,DELETE
+
+
+
+INSERT:
+Skeleton of the Insert:
+INSERT INTO
+<table_name> (<columns>)
+VALUES
+(<values>)
+
+Example:
+INSERT INTO USERS (username,password,full name)
+Values
+(‘newman’,’USMAIL’,’newman’)
+
+SELECT:
+getting information from the table
+
+SELECT column name
+FROM <table>
+WHERE <condition>
+ORDER BY <column>
+
+for example:
+SELECT indium,fullname
+FROM users
+
+SELECT password
+FROM users
+WHERE idum < 12
+
+SELECT *
+FROM moms
+WHERE username = ‘ jerry'
+
+Now what if we need to have usernames and the user’s mother’s name
+
+JOINS :
+
+SELECT <COLUMNS>
+FROM <TABLE>
+JOIN <TABLE>
+ON <PREDICATE> PREDICATE means the common column
+
+SELECT USERS.FULLNAME,MOMS.MOTHER
+FROM USERS
+JOIN MOMS
+USERS.USERNAME = MOMS.USERNAME
+
+
+UPDATE: change the information in the table
+
+UPDATE USERS
+SET PASSWORD = ‘1234'
+WHERE indium = 10
+
+DELETE :
+
+DELETE FROM USERS
+WHERE USERNAME = ‘NEWMAN'
+
+
+Data dype in SQL :
+
+Date - numaric and text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

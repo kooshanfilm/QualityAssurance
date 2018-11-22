@@ -1,0 +1,201 @@
+
+Arrays
+
+you can’t assign the whole array to another array
+Disadvantages of Arrays
+-Back to back chunks of memory
+-In case if you need extra space you can’t add a new element because it might be occupied
+-
+Advantage of Array :
+-Random access
+-can access the element of the array by index
+-first element start at 0 and last element is (n-1)
+-50 element 0(start) and last (50-1)
+Binary Search(divide and conquer)
+
+The idea of binary search is to divide and conquer and reducing search area by half each time and try to find the target number
+
+
+you can’t do binary search on not sorted array
+how to do it is :
+find the mid of the array and then see if the mid is larger or smaller than the number you looking for example
+
+
+
+
+
+worst case: when the element is at the end of the array or if the element is not in the array
+logn
+
+
+Best case: the target is in the midpoint of the array
+O(1)
+
+
+
+Recursion
+
+recursion is a function that call it self
+fact(n) = n * fact(n-1)
+
+
+for recursion you need to have the base case to stop the recursion
+
+
+note that recursive function can also have multiple base cases for example the fibonacci number
+Stack
+
+usually stacks is implemented in one of this two ways:
+either Array or Linked list
+
+
+Last in first out
+
+
+two things we can do stack:
+Push:
+Pop:
+we need to track the top of the stack
+
+
+
+
+
+Hash table
+
+Hash tables combine advantages of Array and linked list
+for example Random access ability of array with dynamism of linked list.
+
+
+the disadvantage of using tastable is :
+they are not great at ordering or sorting data
+Hash table is is combination of two things :
+1-Hash function and
+2.array
+
+
+
+
+
+disadvantage of hash table and problem:
+Collision occurs when two peaces of data run throw the hash function and out put the same hash code:
+
+
+for example in the above example > if we have “James” and out put will be also position 4
+how to solve this : by linear probing:
+in the case of collision we try to place data in the next consecutive element in the array. looking until find a empty space.
+
+
+Problem with linear probing:
+CLUSTERING: when a miss happens and element push to another location there will be a chance that this happens in the future and cluster will grow.
+
+
+How resolve the collision:
+what if instead of each element of array holding just one data it holds multiple pieces of data
+
+
+
+
+Insertion sort
+
+o (n2)
+
+
+left side not sort it , right side sorted
+Selection sort
+
+if we have list of numbers like
+
+
+5 2 1 3 6 4
+
+
+start from beginning look for small number bring it in front continue look for the small number , after that if you find the small number swape make sure you keep track of the last element
+
+
+running time : O(n^2)
+
+
+5  2 1 3 6 4
+> 5 2 1 3 6 4 > found 1 and swipe with 5
+now 1 is sorted therefore leave it
+
+
+> 1-2-5-3-6-4 > found 2 and swipe it with 2
+>1-2-5-3-6-4 > found 3 swipe it with 5
+
+
+
+
+selection sort == go find and select the smallest number and bring it to the from
+
+
+search from unsorted part of the array and find the smallest number swipe with first element of unsorted
+
+
+worst case: look for go throw all the array to find the smallest and we have to do this N times(once for each elements of the array).
+
+
+Best case: we have to go throw all the array at least once meaning N times
+
+
+
+Bubble sort
+
+in the bible sort lets say we have the following example :
+
+
+1 4 5 6 7 8 3
+
+
+for each element I if the neighbor is not in the order then , swap
+
+
+what is the running time of bubble sort >
+
+
+— first we need to go throw all the elements to check if they are in the order or not , so we have N elements therefore O(N)
+then from these if all of theme are not in the order then we need to swap n elements therefore O(N)
+so in the total we have O(N^2)
+
+
+What is the best case of running time for bubble sort ?
+-lets say all the elements in the list is sorted then we just need to go throw the list once therefore O(N)
+
+
+
+
+in pseudocode:
+- set swap counter to a non-zero value
+reset seat counter to 0
+look at each adjacent pair
+     if two adjacent element are not in the order swap them
+
+
+
+Linked list
+
+to check if we are at the end of list when the last node is NULL
+Advantage :
+— add elements to the array
+Disadvantage :
+-There is no random access in linked list
+Running time of search in Linked list O(N) cuz in the worst case the element that we are looking for might be at the end of the list
+Best case of the search is O(1) cuz the number can be at the beginning of the list
+
+
+— The is also applying for deleting a node
+Liner sort
+
+Merge Sort
+
+if the element is less than 2 we should not do anything
+
+
+else
+
+
+ divid our list in to the 2 section and then
+— sort the left side
+— sort the right side
+** merge right side and left side together

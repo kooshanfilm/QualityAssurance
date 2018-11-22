@@ -1,0 +1,250 @@
+
+LX-Q
+
+How To Test Web Forms in 7 Steps:
+     -fill the form press send and go check if the form is in database
+     -if confirmation will send to email make sure tha check email
+     -if the email address is correct or not
+     -check the required filed is correct
+     -at any stage if I press send the form should give me an error
+     -if the form is empty make sure when send get an error
+     -security sql injection
+     -tested on supported browsers
+     -if i complete the report and suppose to get an thank you letter shuld go and check that
+
+
+Explain The RESTFul Web Service?
+2 kinds
+SOAP >> xml base
+restfull web services
+
+
+
+
+What is API testing :
+A RESTful API is an application program interface (API) that uses HTTP requests to GET, PUT, POST and DELETE data. Representational state transfer (REST), which is used by browsers, can be thought of as the language of the Internet.
+
+
+API allows two pieces of software to talk to each otehr
+
+
+how do i test eventbase api:
+-verfiying the request and responces are meet the AC
+
+
+for example for each call what to have in the headers and or into the body and what response I should get and if there is an any error massage see the error message and response code
+
+
+How to see the live log file in Android studio and Xcode
+
+
+
+
+
+
+
+
+
+Dropbox
+
+   Author: kooshanfilm@hotmail.com
+* Suppose that both Alice and Bob have have downloaded a file A.pdf from some website and that each therefore has an identical copy thereof. Suppose that both Alice and Bob store their copy in their Dropbox folder . Why does Dropbox only store one copy instead of two copies of that file on its servers? For simplicity, let's assume that Dropbox doesn't have redundant servers or backups more generally so that Dropbox's only choice is to store one or two copies.
+
+Mix 1
+
+   Author: kooshanfilm@hotmail.com
+
+
+Genral QA questions
+1.There is a test automation running and fails 13%, say 2/7 times? How you will debug when there is no code change or test code change?
+
+
+A:
+
+
+check if test data is still relevant
+if servers are responding in desired turnaround time
+check logs for similar kind of errors
+check if application was up ,the whole time
+check if machines are behaving slower due to continuos runs and memory leaks
+Look at the failures in the logs, in general, it will be the health of the server to be checked,
+
+
+2.HTML:
+consider the followig :
+<a href="#some_text">My Link </a> where will this link go?
+
+
+A: The link will scroll the page to an element with the ID gogole
+
+
+HTML and CSS
+What is a Class selector and how does it differ from an ID selector?
+A: Class selectors are used to apply style to multiple HTML identified with the same class
+whereas ID selectors are unique..
+
+
+What are the advantages and disadvantages of External Style Sheets?
+A: The biggest advantages of external style sheets are that they can be applied to multiple documents while being managed from a single style sheet. This keeps code DRY and improves efficiency and convenience.
+The disadvantages are that it may decrease loading time in some situations. It may also not be practical if there are not enough styling conditions to justify an external sheet.
+
+
+
+
+
+
+
+HTML
+
+   Author: kooshanfilm@hotmail.com
+Why do i get a 405 Not Allowed error message when using 'action' in html?
+
+
+<form action=“wwww.google.ca" method="POST" name="my_form">
+
+
+The action attribute submits information to the server and is processed in the back end code which is handled by php or another programming language the front end code is just directing the destination. So without something configured and set up to receive and read the information the 405 error message will display.
+
+
+
+
+
+
+
+HTML
+
+   Author: kooshanfilm@hotmail.com
+
+the link will scroll the page to an element with the ID google
+Good coding question
+
+   Author: kooshanfilm@hotmail.com
+Using the each method, iterate over the contact_list array. Assign each array item to the local variable contact in the block and print out the value of the name and phone_number keys.
+
+
+contact_list = [
+     {"name" => "Jason", "phone_number" => "123"},
+     {"name" => "Nick", "phone_number" => "456"}
+]
+
+
+contact_list.each do |contact|
+     puts contact["name"]
+     puts contact["phone_number"]
+end
+
+
+
+
+
+
+
+Linked list
+
+   Author: kooshanfilm@hotmail.com
+write boundary test cases for whether a linked list is circular linked list or not?
+Take a flag bit at each node and make it zero initially. While visiting each node make the flag bit as one if it is zero. If already flag bit found as one then loop exist that is circular list.
+* Start from a given node and traverse the linked list. Validate for null or start node point condition while traversing the linkedlist . In case we find node->next = null at any time then LL is not circular in nature. In case we encounter starting node address again then it means it is circular LL.
+Ruby: Constructor overloading
+
+   Author: kooshanfilm@hotmail.com
+do you know what is constructor overloading means?
+Constructor overloading is the ability to have multiple types of constructors in a class
+QA interview questions
+
+   Author: kooshanfilm@hotmail.com
+1-your manager wants 100% automation for a product. But it is not possible. what will you do?
+
+2-write test cases for group chat?
+
+3-Tell me the unique and critical defect you have identified till now and tell me your experience if you faced challenges with Dev team.
+
+4-How will you prioritize below 3 projects
+ 1. Minor defects, less business impact but customer has reported this issue
+         2. Projects whose details are not there but its the company projects
+         3. Critical project with huge impact on business
+
+5-What all type of testing will you perform on the google search  and the Negative and positive test cases(  interested knowing the types like functional, non functional, performance, load , stress and do not forget to mentioned localization terms in your test case)
+
+
+6-Difference between blackbox and white box?
+
+7-What will you do when you miss a dead line for a release.?
+
+8-An Address book in your mobile has its contacts syncd with the Internet.
+   write test cases for this scenario.
+
+
+9-What if there isn’t enough time for thorough testing? What would you do?
+
+
+10-Describe common problems of test automation.
+
+
+11-Write the test cases for a vending machine.(stress testing, load testing , security testing , functional testing etc..)
+
+
+12.Write test cases for a software which accepts inputs as dd/mm/yyyy and gives output as 4 days after the input.
+
+
+ex-input-07/01/2011..out put should be 11/01/2011.
+
+
+give boundary values of each test cases..assume dd/mm/yyyy in correct format
+13.Now that you've cloned that repository, let's say you've done some work on a branch named "awesome_stuff." What command would you run to push that branch up to your remote?> git push origin awesome_stuff
+
+
+
+
+14.What is "performance" in the context of building websites? performaance refers to how fast a website loads
+
+
+How would you debug the following case your phone gets switched off every time you click on the alarm icon
+1. Would check the same app in another device, if it's working there then would continue with the following possibilities
+2. Would clear the app data and caches
+3. Try to do force stop and start
+4. Do reset the device to factory default
+5. Uninsall and install
+
+
+
+
+
+
+
+Coding interview practice
+
+   Author: kooshanfilm@hotmail.com
+1-Reversing the array :
+
+
+
+
+
+
+2-Given an array say [0,1,2,3,5,6,7,11,12,14,20]
+given a number say 5.
+
+Now find the sum of elements which sum to 5
+
+eg:2+3=5, 0+5=5 etc.
+I guess the interviewer wanted all possible combinations eg 0+2+3=5, etc
+
+
+
+
+0+1
+0+2
+0+3
+
+
+QA-Accepts inputs
+
+   Author: kooshanfilm@hotmail.com
+Write test cases for a software which accepts inputs as dd/mm/yyyy and gives output as 4 days after the input.
+
+
+ex-input-07/01/2011..out put should be 11/01/2011.
+
+
+give boundary values of each test cases..assume dd/mm/yyyy in correct format

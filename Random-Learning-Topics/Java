@@ -1,0 +1,1246 @@
+
+All notes about JAVA you need to know
+
+Java looks for a method that is passed called main
+public static void main (String[] args){
+}
+Because its a class method and its not a instance method thats why it was used Static
+inside of the package treehouse\Treet.java:
+package com.treehouse
+how to import:
+     import com.treehouse.treet;
+How does browser works
+
+   Author: koushanfilm
+you type the address , browser sends HTTP request to server that web site are in that
+browser sends back http respond to the browser
+
+
+The respond is HTML and browser render engine  will read it
+Details about HTTP request :
+HTTP version
+Name of the browser , date and some other information
+like:
+Get amazon.ca/silk  http 1.1
+Host amazon
+Date tuesday sep 09
+User mozila
+Http responds
+Http version status code  like 200 OK
+Html body
+String and Variables
+
+/*
+skip secuence : \n
+String firstName = "James";
+%s which is format string is think about where do you
+want to call that variable and you need to , at the end
+*/
+import java.io.Console;
+public class Strings_variables {
+    public static void main(String[] args) {
+        Console console = System.console();
+        String firstName = "James";
+        console.printf("This is introduction %s\n",firstName);
+        console.printf("%s this is learning new lang",firstName);
+  }
+}
+input from user
+
+/*
+input from user
+
+
+*/
+
+
+import java.io.Console;
+public class Strings_variables {
+
+
+    public static void main(String[] args) {
+        Console console = System.console();
+        String firstName = console.readLine("what is your name  ");
+        console.printf("This is introduction %s\n",firstName);
+        console.printf("%s this is learning new lang",firstName);
+  }
+}
+Introduction
+
+Java is compiled program meaning:
+     we need to run compile to run the readable java code into computer readable code
+if you need to run this on console run the following:
+javac and then then name of the file
+after run java name of the file without.Java
+import java.io.Console;
+public class intro {
+    public static void main(String[] args) {
+        Console console = System.console();
+        // Welcome to the Introductions program!  Your code goes below here
+         console.printf("This is introduction");
+  }
+}
+how to create Object from class and use it in different class:
+
+   Author: koushanfilm
+for example you have two class interface 1 and interface 2
+
+
+in the interface 2 you have method :
+
+
+public singlemsg (String name){
+System.out.println(“your name is “+name);
+
+
+now you in your interface1 you want to use it :
+
+
+public static void main(String[] args){
+interface2 object = new interfa
+default constructor :
+
+   Author: koushanfilm
+-same name as the class name
+-method is functions
+function can have parameters
+like :
+public static void main(String[] arg)
+
+
+if you have a constructor and you create a new variables like this
+
+
+public monster(int health, int attack, int movement){
+//now you can refer int health up there by using this
+
+
+this.health=newhealth;
+this.attack=new attack;
+
+
+best example could be :
+
+
+public class this{
+
+
+public int x=0;
+public int y=0
+
+
+// now creating contractor
+
+
+public test(int x, int y){
+this.x=x;
+this.y=y;
+}
+
+Public Vs Private and this.method
+
+   Author: koushanfilm
+
+
+public is you can use it in any classes
+
+
+Private you can only use it in thesame class nowhere else
+
+
+if we have
+int x=2;
+int y=3;
+and method :
+public static int fun(int x,int y){
+x=4;
+y=5
+now x here java thinks that x=4 is referring to x=2 therefore thinks locally
+but if we want to change that to just think about x in parameter then we should use
+this.x=4
+
+Concept of Java :
+
+   Author: koushanfilm
+* & : Returns true if boolean value on theright and left are both true(Always evaluates both boolean values)
+
+* && : Returns true if boolean valueon the right and left are both true(Stops evaluating after first false)
+* | : Returns true if either boolean value on the right or left are true (Always evaluates both boolean values)
+
+* || : Returns true if either boolean value on the right or left are true (Stops evaluating after first true)
+
+
+Static:means  that only that class can call :
+final :best way to say is final means you can not change it anywhere else:
+String name=”test”;
+name =”this is test 2”;
+OK
+String final name=”test”;
+// this is wrong YOU CAN NOT DO THIS in java
+name =”this is test 2”;
+
+
+when you dont know how many you have int in your argument you will put …
+
+
+like
+
+
+public static int numbers(int....numbers){
+}
+
+Table of Contents
+
+   Author: koushanfilm
+1. Junit help
+2. Untitled
+3. Automation
+4. Pass by value
+5. & && || ++
+6. Public ,Private , Protected
+7. OOP question
+8. Dynamic polymorphism
+9. Interview Question
+10. reversing String
+11. Printing reversing array using char
+12. QA Amazon Questions
+13. sum of 1 to n
+14. Abstract
+15. Untitled Note
+16. encapsulation
+17. Interface and abstract
+18. Using of static method
+19. User input
+20. Itrator
+21. Concept of Static
+22. Liner Search
+23. How does browser works
+24. Try catch
+25. Some important note
+26. Stack
+27. Memory Allocation
+Junit help
+
+Before
+
+After
+
+Beforeclass
+
+Afterclass
+Java
+
+   Author: koushanfilm
+Java Enterprise Edition is for networking and web based application
+
+
+Java Micro is for developing a Android and Blackberry apps
+Untitled
+
+   Author: koushanfilm
+
+
+public class main_page {
+
+
+public static void main(String[] Args) throws InterruptedException{
+
+
+
+ GUI call=new GUI();
+
+
+
+ call.run_server();
+
+ call.open_web();
+
+
+
+ call.Flight("YTO","YVR" );
+
+ call.Date("22/02/2014", "28/02/2014");
+
+ call.get_price();
+
+
+
+}
+
+
+
+}
+Automation
+
+   Author: koushanfilm
+
+import java.io.BufferedWriter;
+
+import java.io.File;
+
+import java.io.FileWriter;
+
+import java.io.IOException;
+
+import java.text.SimpleDateFormat;
+
+import java.util.ArrayList;
+
+import java.util.Calendar;
+
+import java.util.List;
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.Keys;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import org.openqa.selenium.support.ui.Select;
+
+import org.openqa.selenium.chrome.ChromeDriverService;
+
+
+public class GUI {
+
+
+
+ private static ChromeDriverService service;
+
+ static WebDriver driver;
+
+
+
+
+
+ public void run_server() {
+
+
+
+ service = new ChromeDriverService.Builder()
+
+ .usingDriverExecutable(new File("c:/x/chromedriver.exe"))
+
+ .usingAnyFreePort()
+
+ .build();
+
+ try {
+
+ service.start();
+
+ } catch (IOException e) {
+
+ // TODO Auto-generated catch block
+
+ e.printStackTrace();
+
+ }
+
+ driver = new RemoteWebDriver(service.getUrl(),
+
+ DesiredCapabilities.chrome());
+
+
+
+ }
+public void open_web(){
+
+ driver.get("http://www.expedia.ca");
+
+
+
+
+
+}
+public void Flight(String going_air_port,String coming_air_port) throws InterruptedException{
+
+
+
+
+
+
+
+ //Thread.sleep(10);
+
+ driver.findElement(By.xpath("//*[@id='popupClose']")).click();
+
+ driver.findElement(By.xpath("//*[@id='F-origin']")).sendKeys(going_air_port);
+
+ //driver.findElement(By.xpath("//*[@id='origin']")).clear();
+
+
+
+ driver.findElement(By.xpath("//*[@id='F-destination']")).sendKeys(coming_air_port);
+
+
+
+}
+public void Date(String Going_date,String coming_back) throws InterruptedException{
+
+ Thread.sleep(2000);
+
+
+
+ driver.findElement(By.xpath("//*[@id='F-fromDate']")).click();
+
+ driver.findElement(By.xpath("//*[@id='F-fromDate']")).clear();
+
+ driver.findElement(By.xpath("//*[@id='F-fromDate']")).sendKeys(Going_date);
+
+
+
+ driver.switchTo().frame("CalFrame_DPD");
+
+ driver.findElement(By.xpath("//*[@id='closeText']")).click();
+
+ Thread.sleep(1000);
+
+
+
+
+
+ //System.out.println("x");
+
+
+
+ driver.switchTo().defaultContent();
+
+
+
+ driver.findElement(By.xpath("//*[@id='F-toDate']")).click();
+
+ driver.findElement(By.xpath("//*[@id='F-toDate']")).clear();
+
+ driver.findElement(By.xpath("//*[@id='F-toDate']")).sendKeys(coming_back);
+
+ driver.switchTo().frame("CalFrame_DPD");
+
+ driver.findElement(By.xpath("//*[@id='closeText']")).click();
+
+ driver.switchTo().defaultContent();
+
+ driver.findElement(By.xpath("//*[@id='F-searchButtonExt1']")).click();
+
+
+
+}
+public void get_price() throws InterruptedException{
+
+ Thread.sleep(5000);
+
+
+
+ String x=driver.findElement(By.xpath("//*[@id='type3TotalPrice0']")).getText();
+
+ System.out.println(x);
+
+}
+}
+
+Pass by value
+
+   Author: koushanfilm
+Does Java pass by reference or by value?
+
+
+
+
+Java passes everything by value, and not by reference – make sure you remember that. And when we say everything, we mean everything – objects, arrays (which are objects in Java), primitive types (like ints and floats), etc. – these are all passed by value in Java. What is the difference between pass by value and pass by reference? When passing an argument (or even multiple arguments) to a method, Java will create a copy or copies of the values inside the original variable(s) and pass that to the method as arguments – and that is why it is called pass by value. The key with pass by value is that the method will not receive the actual variable that is being passed – but just a copy of the value being stored inside the variable. So, how does this affect the code you write? Well, this is best illustrated by a simple and easy to understand example.
+Example of pass by value in Java
+
+Suppose we have a method that is named “Receiving” and it expects an integer to be passed to it:
+
+public void Receiving (int var)
+{
+  var = var + 2;
+}
+
+Note that the “var” variable has 2 added to it. Now, suppose that we have some code which calls the method Receiving:
+
+public static void main(String [] args)
+{
+  int passing = 3;
+
+  Receiving (passing);
+
+  System.out.println("The value of passing is: " + passing);
+}
+
+
+In the main method, we set the variable “passing” to 3, and then pass that variable to the Receiving method, which then adds 2 to the variable passed in.
+What do you think the “System.out.println” call will print out? Well, if you thought it would print out a “5″ you are wrong. It will actually print out a “3″. Why does it print out a 3 when we clearly added a 2 to the value in the Receiving method?
+The reason it prints out a “3″ is because Java passes arguments by value – which means that when the call to “Receiving” is made, Java will just create a copy of the “passing” variable and that copy is what gets passed to the Receiving method – and not the original variable stored in the “main” method. This is why whatever happens to “var” inside the Receiving method does not affect the “passing” variable inside the main method.
+How does pass by value work?
+
+Java basically creates another integer variable with the value of 3, and passes that to the “Receiving” method. That is why it is called “pass by value” – because the value of 3 is what is being passed to the “Receiving” method, not a reference to the “passing” variable.
+Are objects passed by reference in Java?
+
+As we said in the beginning of this article – everything is passed by value in Java. So, objects are not passed by reference in Java. Let’s be a little bit more specific by what we mean here: objects are passed by reference – meaning that a reference/memory address is passed when an object is assigned to another – BUT (and this is what’s important) that reference is actually passed by value. The reference is passed by value because a copy of the reference value is created and passed into the other object – read this entire article and this will make a lot more sense. So objects are still passed by value in Java, just like everything else.
+One other very important thing to know is that a variable of a class type stores an address of the object, and not the object itself. The object itself is stored at the address which the variable points to. Let’s suppose we have a class called SomeClass and that we instantiate it with a variable of the SomeClass type. So, suppose we have the following very simple code:
+
+SomeClass someVar;
+
+The someVar variable above is a variable of a class type – which is commonly referred to as an object. But, what actually happens behind the scenes is that someVar will just contain a reference – which is basically a memory address that points to the real object and all the class variables for that object actually lives. So, remember that a variable of a class type – or what is commonly referred to as an object of a class – really just stores a memory address that points to the real object. Bottom line: anytime you see a variable of a class type like the someVar variable above, just remember that it is basically a reference that stores an address in memory.
+Confused yet? An example and some diagrams will help make this very clear. Suppose we have a class called PersonClass, which has a method called set that just sets the name and age for a given Person object. The details of the class itself don’t matter for the purpose of this example so we won’t bother to show the implementation of PersonClass. Now, let’s say we have the following code:
+
+//create an object by passing in a name and age:
+PersonClass variable1 = new PersonClass("Mary", 32);
+
+PersonClass variable2;
+
+// Both variable2 and variable1 now both name the same object
+variable2 = variable1;
+
+/*this also changes variable1, since variable 2 and variable1
+   name the same exact object: */
+
+variable2.set("Jack", 22);
+
+System.out.println(variable1);
+
+Let’s just assume that System.out.println method above will print the name and age of a PersonClass object – even though this is not correct, it does keep the example simple and easy to understand. So, if we run the code above, the output will be:
+
+Jack 22
+
+In the code above, you can see that when we made a change to variable2, that it also changed variable1. This might confuse you into thinking that because of that fact Java is pass by reference – and you would be very WRONG. Both variable1 and variable2 hold a reference to the same object in memory – and this happened when we ran this line of code “variable2 = variable1″. When we use the assignment operator (the “=”) with variables of a class type, then we are copying that reference value – in other words variable2 is given the memory address (or reference) that is being stored in variable1. Remember that the word reference means the same thing as memory address. This assignment of references is best displayed by actual drawings, which we show below:
+An illustration of pass by value in Java
+
+
+
+So, looking at the images above it should be clear that variable1 and variable2 are just two different references to the same exact spot in memory. Because of the fact that the statement “variable2 = variable1″ essentially just copies the reference from variable1 into variable2, this is pass by value. You should think of the reference (which is a memory address) as the value, and in this case that reference is what is being copied. And, that is exactly what pass by value means – a copy of a value is passed to another variable. You should also read our article on the differences between primitive types and reference types here: Primitive type vs Reference type.
+Let’s go through one last example. Let’s say we have the following code:
+
+//create an object by passing in a name and age:
+PersonClass variable1 = new PersonClass("Mary", 32);
+
+PersonClass variable2;
+
+//Both variable2 and variable1 now reference the same object
+variable2 = variable1;
+
+
+PersonClass variable3 = new PersonClass("Andre", 45);
+
+// variable1 now points to variable3
+variable1 = variable3;
+
+//WHAT IS OUTPUT BY THIS?
+System.out.println(variable2);
+System.out.println(variable1);
+
+
+If we run the code above it will output the code below:
+
+Mary 32
+Andre 45
+
+The key to understanding the code above is the fact that changing the object that variable1 points to does not change variable2. So, even though variable1 is changed to point to a different object, that has no effect whatsoever on variable2. Hopefully that is clear to you – that variable1 and variable2 are not interchangeable – they are different variables that just store the same value – at least until the “variable1 = variable3″ statement. And that should prove to you that Java passes objects by value, and everything else for that matter.
+Is it possible to pass an object by reference in Java?
+
+No, there are no “extra” language features in Java that would allow for you to pass an object by reference in Java. Java is strictly pass by value, and does not give the programmer the option of passing anything by reference.
+Are arrays passed by reference in Java?
+
+Arrays in Java are also objects. And what did you learn about objects in Java? Well, that they are passed by value and not passed by reference. And the same is true for arrays in Java – they are passed by value and not by reference. Of course, like any other class object, when an array is passed to another method that method can still change the contents of the array itself. But, what is being passed to the method is a copy of the reference address that points to the array object. Just take a look at our example above for the PersonClass – the same exact principles apply to arrays since they are objects in Java, and are passed by value.
+& && || ++
+
+   Author: koushanfilm
+& is bitwise. && is logical.
+& evaluates both sides of the operation.
+
+&& evaluates the left side of the operation, if it's true, it continues and evaluates the right side.
+Public ,Private , Protected
+
+   Author: koushanfilm
+public, in which case that class is visible to all classes everywhere
+Modifier	Class	Package	Subclass	World
+public	Y	Y	Y	Y
+protected	Y	Y	Y	N
+no modifier	Y	Y	N	N
+private	Y	N	N	N
+
+OOP question
+
+   Author: koushanfilm
+18. What are the disadvantages of sequential storage?
+Ans:
+for example Array
+
+
+--Fixed amount of storage we have even if we need less
+-- if we need more storage we can not have it
+
+
+
+19. What are the disadvantages of representing a stack or queue by a linked list?
+Ans:
+i) A node in a linked list (info and next field) occupies more storage than a corresponding element in an array.
+ii) Additional time spent in managing the available list.
+
+
+
+
+
+The following are the four basic features of OOP:
+
+
+
+* Abstraction - Refers to the process of exposing only the relevant and essential data to the users without showing unnecessary information.
+* Polymorphism - Allows you to use an entity in multiple forms.
+* Encapsulation - Prevents the data from unwanted access by binding of code and data in a single unit called object.
+* Inheritance - Promotes the reusability of code and eliminates the use of redundant code. It is the property through which a child class obtains all the features defined in its parent class. When a class inherits the common properties of another class, the class inheriting the properties is called a derived class and the class that allows inheritance of its common properties is called a base class.
+
+Explain the concept of constructor?
+Constructor is a special method of a class, which is called automatically when the instance of a class is created
+
+What are abstract classes? What are the distinct characteristics of an abstract class?
+An abstract class is a class that cannot be instantiated and is always used as a base class.
+The following are the characteristics of an abstract class:
+* You cannot instantiate an abstract class directly. This implies that you cannot create an object of the abstract class; it must be inherited.
+* You can have abstract as well as non-abstract members in an abstract class.
+* You must declare at least one abstract method in the abstract class.
+* An abstract class is always public.
+* An abstract class is declared using the abstract keyword.
+
+
+ What is a hashtable?
+In short, hashtable is an object holding the key-value pairs.
+
+
+
+What are the different ways a method can be overloaded?
+The different ways to overload a method are given as follows:
+
+* By changing the number of parameters used
+* By changing the order of parameters
+* By using different data types for the parameters
+
+Differentiate between an abstract class and an interface
+
+
+Abstract Class: // to create a temple
+
+
+
+1. A class can extend only one abstract class
+2. The members of abstract class can be private as well as protected.
+3. Any class can extend an abstract class.
+4. The class extending the abstract class may or may not implement any of its method.
+5. An abstract class can implement methods.
+6. abstract class can have non abstract methods
+Interface
+1. A class can implement several interfaces
+2. An interface can only have public members.
+3. Only an interface can extend another interface.
+4. All methods in an interface should be abstract
+5. Interface does not have constructor.
+6. Interfaces cannot contain body of any of its method.
+
+What are queues and stacks?
+Stacks refer to a list in which all items are accessed and processed on the Last-In-First-Out (LIFO) basis. In a stack, elements are inserted (push operation) and deleted (pop operation) from the same end called top.
+
+
+
+Queues refer to a list in which insertion and deletion of an item is done on the First-In-First-Out (FIFO) basis. The items in a queue are inserted from the one end, called the rear end, and are deleted from the other end, called thefront end of the queue.
+
+
+Dynamic polymorphism
+
+   Author: koushanfilm
+class Vehicle{
+
+    public void move(){
+
+    System.out.println(“Vehicles can move!!”);
+
+    }
+
+}
+
+class MotorBike extends Vehicle{
+
+    public void move(){
+
+    System.out.println(“MotorBike can move and accelerate too!!”);
+
+    }
+
+}
+
+class Test{
+
+    public static void main(String[] args){
+
+    Vehicle vh=new MotorBike();
+
+    vh.move();    // prints MotorBike can move and accelerate too!!
+
+    vh=new Vehicle();
+
+    vh.move();    // prints Vehicles can move!!
+
+    }
+
+}
+reversing String
+
+   Author: koushanfilm
+
+String name="book";
+
+
+
+char[] rev=name.toCharArray();
+
+
+
+char[] mynew=newchar[rev.length];
+
+
+
+intn=0;
+
+for(inti=name.length()-1;i>=0;i--){
+
+System.out.print(rev[i]);
+
+mynew[n]=rev[i];
+
+n++;
+
+}
+
+
+
+
+
+System.out.println("");
+
+System.out.println("After reverse");
+
+for(intx=0;x<mynew.length;x++)
+
+System.out.print(mynew[x]);
+
+
+Printing reversing array using char
+
+   Author: koushanfilm
+
+
+String g ="book";
+
+
+
+char[] list = g.toCharArray();
+
+
+
+for(inti=list.length-1;i>=0;i--)
+
+System.out.print(list[i]);
+char c = g.charAt(0);  // returns 'l'
+QA Amazon Questions
+
+   Author: koushanfilm
+First Tip:
+Always ask questions to get more info. Never assume. If you do assume, make your case before giving an answer. Interviewer wants to see what assumptions you make and what smart questions you ask.
+-------
+Exit and Entry criteria for the test plan:
+Entry criteria for functional testing: Check whether coding is covered.Check whether srs is baselined.
+
+Exit criteria : Check whether the requirements are covered.RTM should be baselined.
+---------
+Test Plancontains the following features:
+project review,references,features to be tested,Test strategy,Types of testing,entry/exit criteria,Automation plan,communication plan,requirements,deliverables,staffing plan,risks and contingencies ,miles and deliverables ,metrics,approvals
+sum of 1 to n
+
+   Author: koushanfilm
+ //1+2+3+4+5=15
+
+
+
+intn=100;
+
+intsum=0;
+
+for(inti=0;i<=n;i++){
+
+sum=sum+i;
+
+
+
+}
+
+System.out.println(sum);
+Abstract
+
+   Author: koushanfilm
+public abstract class class2 {
+
+
+}
+
+
+
+
+
+
+classclass3extendsclass2{
+
+
+
+@Override
+
+publicvoidrun() {
+
+//TODOAuto-generated method stub
+
+
+
+}
+
+
+
+}
+
+An abstract class in Java is a class that contains one or more abstract methods, which are simply method declarations without a body — that is, without executable code that implements the class or method. An abstract method is like a prototype for a method, declaring the method’s return type and parameter list but not providing an actual implementation of the method.
+You can’t instantiate an abstract class. However, you can create a subclass that extends an abstract class and provides an implementation of the abstract methods defined by the abstract class. You can instantiate the subclass.
+To create an abstract method, you specify the modifier abstract and replace the method body with a semicolon:
+
+public abstract return-type method-name(parameter-list);
+Here’s an example:
+
+    public abstract int hit(int batSpeed);
+To create an abstract class, you use the abstract on the class declaration and include at least one abstract method. For example:
+
+public abstract class Ball
+{
+    public abstract int hit(int batSpeed);
+}
+You can create a subclass from an abstract class like this:
+
+public class BaseBall extends Ball
+{
+    public int hit(int batSpeed)
+    {
+        // code that implements the hit method goes here
+    }
+}
+When you subclass an abstract class, the subclass must provide an implementation for each abstract method in the abstract class. In other words, it must override each abstract method.
+Abstract classes are useful when you want to create a generic type that is used as the superclass for two or more subclasses, but the superclass itself doesn’t represent an actual object. If all employees are either salaried or hourly, for example, it makes sense to create an abstract Employee class and then use it as the base class for theSalariedEmployee and HourlyEmployee subclasses.
+Here are a few additional details regarding abstract classes:
+* Not all the methods in an abstract class have to be abstract. A class can provide an implementation for some of its methods but not others. In fact, even if a class doesn’t have any abstract methods, you can still declare it as abstract. (In that case, though, the class can’t be instantiated.)
+* A private method can’t be abstract. All abstract methods must be public.
+* A class can’t be both abstract and final.
+encapsulation
+
+   Author: koushanfilm
+What is Encapsulation in Java and OOPS with Example
+
+Encapsulation in Java or object oriented programming language is a concept which enforce protecting variables, functions from outside of class, in order to better manage that piece of code and having least impact or no impact on other parts of program duec to change in protected code. Encapsulation in Java is visible at different places and Java language itself provide many construct to encapsulate members. You can completely encapsulate a member be it a variable or method in Java by using private keyword and you can even achieve a lesser degree of encapsulation in Java by using other access modifier like protected or public. true value of encapsulation is realized in an environment which is prone to change a lot and we know that in software requirements changes every day at that time if you have your code well encapsulated you can better manage risk with change in requirement. Along with abstaction in java and polymorphism in Java, Encapsulation is a must know concept. In this java tutorial  we will see How to use encapsulation in Java, advantage and disadvantage of Encapsulationand various design patterns and real life problems which makes use of Encapsulation object oriented concept. If you are looking for a quick guide on both OOPS and SOLID design principle in Java than you may find 10 Object Oriented Design principles Java programmer should know  interesting.
+
+
+
+What is Encapsulation in Java
+
+Encapsulation is nothing but protecting anything which is prone to change. rational behind encapsulation is that if any functionality which is well encapsulated in code i.e maintained in just one place and not scattered around code is easy to change. this can be better explained with a simple example of encapsulation in Java. we all know that constructor is used to create object in Java and constructor can accept argument. Suppose we have a class Loan has a constructor and than in various classes you have created instance of loan by using this constructor. now requirements change and you need to include age of borrower as well while taking loan. Since this code is not well encapsulated i.e. not confined in one place you need to change everywhere you are calling this constructor i.e. for one change you need to modify several file instead of just one file which is more error prone and tedious, though it can be done with refactoring feature of advanced IDE wouldn't it be better if you only need to make change at one place ? Yes that is possible if we encapsulate Loan creation logic in one method say createLoan() and client code call this method and this method internally crate Loan object. in this case you only need to modify this method instead of all client code.
+
+
+Example of Encapsulation in Java
+
+
+class Loan{
+
+    private int duration;  //private variables examples of encapsulation
+
+    private String loan;
+
+    private String borrower;
+
+    private String salary;
+
+
+    //public constructor can break encapsulation instead use factory method
+
+    private Loan(int duration, String loan, String borrower, String salary){
+
+        this.duration = duration;
+
+        this.loan = loan;
+
+        this.borrower = borrower;
+
+        this.salary = salary;
+
+    }
+
+    //no argument consustructor omitted here
+
+
+   // create loan can encapsulate loan creation logic
+    public Loan createLoan(String loanType){
+
+
+
+     //processing based on loan type and than returning loan object
+      return loan;
+    }
+
+
+}
+
+
+In this same example of Encapsulation in Java you see all member variables are made private so they are well encapsulated you can only change or access this variable directly inside this class. if you want to allow outside world to access these variables is better creating a getter and setter e.g. getLoan() that allows you to do any kind of validation, security check before return loan so it gives you complete control of whatever you want to do and single channel of access for client which is controlled and managed.
+
+
+Advantage of Encapsulation in Java and OOPS
+
+Here are few advantages of using Encapsulation while writing code in Java or any Object oriented programming language:
+
+
+1. Encapsulated Code is more flexible and easy to change with new requirements.
+2. Encapsulation in Java makes unit testing easy.
+3. Encapsulation in Java allows you to control who can access what.
+4. Encapsulation also helps to write immutable class in Java which are a good choice in multi-threading
+environment.
+5. Encapsulation reduce coupling of modules and increase cohesion inside a module because all piece of one thing
+are encapsulated in one place.
+6. Encapsulation allows you to change one part of code without affecting other part of code.
+
+
+
+
+Interface and abstract
+
+   Author: koushanfilm
+publicinterfaceclass2{
+
+
+
+
+
+// they are like this
+
+// public abstract void trun
+
+voidturnLeft();
+
+voidturnRight();
+
+voidmoveBack();
+
+voidaccelerate();
+
+
+
+
+
+}
+___
+
+
+publicclassclass3implementsclass2  {
+
+
+
+@Override
+
+publicvoidturnLeft() {
+
+//TODOAuto-generated method stub
+
+
+
+}
+
+
+
+@Override
+
+publicvoidturnRight() {
+
+//TODOAuto-generated method stub
+
+
+
+}
+
+
+
+@Override
+
+publicvoidmoveBack() {
+
+//TODOAuto-generated method stub
+
+
+
+}
+
+
+
+@Override
+
+publicvoidaccelerate() {
+
+//TODOAuto-generated method stub
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+}
+Using of static method
+
+   Author: koushanfilm
+publicclassanimal {
+
+
+
+publicstaticvoidmain (String[] Args){
+
+
+
+class2 call=new class3; // this is printing In A because when we use static it will look at the reference type not the object that is pointing to
+
+class2.printStatic();
+
+class3.printStatic();
+
+
+
+
+
+}
+-----------------
+Class 2:
+public staticvoidprintStatic(){
+
+
+
+System.out.println("In A");
+
+
+
+}
+-----------------
+
+Class 3:
+publicstaticvoidprintStatic(){
+
+
+
+System.out.println("In B");
+
+
+
+}
+User input
+
+   Author: koushanfilm
+Public static void main(String[] Args){
+
+
+Scanner call=new Scanner(System.in);
+
+
+System.out.println("Please enter your name here");
+
+
+boolean pass=false;
+
+
+
+
+String name=call.next();
+
+System.out.println("Here is your name"+name);
+
+
+
+Itrator
+
+   Author: koushanfilm
+publicstaticvoid main (String[] Args){
+
+
+
+ArrayList<String> name=newArrayList<String>();
+
+
+
+name.add("hello");
+
+
+
+name.add("bye");
+
+
+
+name.add("Why");
+
+
+
+Iterator<String> call =name.iterator();
+
+
+
+while(call.hasNext()){
+
+
+
+System.out.println(name);
+
+
+
+
+
+Concept of Static
+
+   Author: koushanfilm
+What does static mean :
+if we create a variable static or method static we don't need to create a instant variable to call that method or that variable for example
+public class main {
+
+
+public static void main(){
+System.out.println(class2.main);
+class2.run();
+}
+
+
+public class class2{
+Static String main="hello_world";
+public static void run(){
+System.out.println("Iam from static method");
+}
+this is also true for methods
+--------------------------
+you can't use non static variable in side the static method
+You can't use non static method  inside of static method
+static variables in a class are initialized before any object of tat class can be created
+Liner Search
+
+   Author: koushanfilm
+publicstaticvoidmain (String[] Args){
+
+
+
+int[]  numb={12,32,33,43,53,62,71,81,6};
+
+    find(numb,12);
+
+}
+
+
+
+publicstaticintfind(int[] x,intnum){
+
+for(inti=0;i<x.length;i++){
+
+if(x[i]==num){
+
+System.out.println("Find @ index "+i);
+
+}
+
+
+
+}
+
+return-1;
+
+
+
+}
+Try catch
+
+   Author: koushanfilm
+Try{
+}
+Catch(Exception ex){
+}
+Some important note
+
+   Author: koushanfilm
+Final :
+
+
+
+final :best way to say is final meansyou can not changeit anywhere else:
+final String name ="hello"
+name ="new"
+// this is wrong YOU CAN NOT DO THIS in java
+
+Publicis you can use it in any classes
+Privateyou can only use it in thesame class nowhere else
+Stack
+
+   Author: koushanfilm
+import java.util.*;
+import java.util.LinkedList;
+public  class Animal{
+
+     public static void main(String[] args){
+
+          Stack<String> stack =new Stack<String>();
+
+          stack.push("zero");
+          stack.push("one");
+          stack.push("two");
+          //stack.pop();
+
+          printstack(stack);
+     }
+
+     public static void printstack(Stack<String> stack){
+
+          System.out.println(stack);
+
+     }
+
+}
+
+Memory Allocation
+
+   Author: koushanfilm
+when we have:
+public void run(){
+point p1 =new point(x,y);
+
+
+}
+p1 is going to be onStackbecause local variables or parameters are stay on stack
+when we say new ==> this will go to Heap or basically all instant variables  here X and Y
+every object has its own address in memory
+
+
+when we have :
+
+
+String s1="hello"
+String s2="hello"
+
+
+if (s1==s2) ==> this is not working because s1 and s2 are object and has memory assosiate with theme
+
+
+are they pointing to same location to memory ?

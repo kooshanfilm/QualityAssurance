@@ -1,0 +1,228 @@
+
+run specific line
+
+you can add `:line number` at the end of the running commas to run specific scenarios you want.
+Capybara reporting on HTML
+
+rspec spec/*--format html --out report.html
+
+How to setup RSpec
+
+create a folder
+Create a sub folder spec
+create your file + Create your spec_helper.rb file
+
+
+
+
+inside of spec_helper.rb add:
+
+
+require 'capybara/dsl'
+require 'rspec/expectations'
+#require 'capybara/webkit'
+Capybara.default_driver = :selenium
+#Capybara.default_driver = :webkit
+#Capybara.javascript_driver = :webkit
+include Capybara::DSL
+include RSpec::Matchers
+
+
+on the main spec file :
+require './spec/spec_helper'
+
+
+
+
+
+find a span class css and click
+
+this is css
+find("#compareALL span.fauxlink",:text => "none").click
+
+
+
+
+
+
+
+Click on the ID in the Div
+
+page.find("#travel_dates-start-display").click
+
+
+
+Click on the text for the class
+
+<p class="name ng-binding">Import</p>
+
+
+page.find(‘.name'(this is the css name),:text=> ‘import’ ).click
+
+
+
+
+
+Page has a css?
+
+page.has_css?("#compareALL span.fauxlink”)
+wait until page has a specific element :
+
+wait until page has a specific element :
+expect(page).to have_selector('#blah', visible:true)
+
+fill text filed
+
+id is course_group_course
+
+
+fill_in 'course_group_courses_attributes_2_name', :with => 'some text'
+Debugging with Binding.pry
+
+require'pry';
+binding.pry
+getting the all the href links of the page using ruby capybara
+
+puts page.all('a').map { |a| a['href'] }
+Pending
+
+feature “ this is my feature i will work on “ do
+     senario “ this is test case is number of “ do pending
+
+
+     # Google click
+
+
+
+     end
+   end
+
+Simulation of Enter key
+
+   Author: koushanfilm
+This is simulation of Enter key for the field form
+
+
+       find_field("Search scripts").native.send_keys(:enter)
+
+
+
+page should have content
+
+first you need to configour capybara :
+RSpec.configure do |config|
+  config.expect_with :rspecdo |c|
+    c.syntax = [:should, :expect]
+  endend
+has_content?("ScriptHub ID")
+change your browser
+
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :firefox)
+end
+
+screenshot
+
+   Author: koushanfilm
+def screenshot_and_open_image
+    Capybara.save_and_open_page_path = "/opt/boxen/repo/koushan_project/x"
+    Capybara::Screenshot.screenshot_and_open_image
+    end
+
+
+call it anywhere you like
+How to select option in drop down
+
+   Author: koushanfilm
+<td class="value"]]
+>
+<select name="organizationSelect" id="organizationSelect"class="required"]]
+>
+<option value="NULL"]]
+>
+Choose...</option]]
+>
+<option value="4c430d62-f1ba-474f-8e8a-4452c55ea0a8">&nbsp;Institution1</option]]
+>
+<option value="e1a4efa7-352d-410a-957e-35c8a3b92944">&nbsp;Institution/ test</option]]
+>
+</select]]
+>
+</td]]
+>
+find('#organizationSelect').find(:xpath,'option[2]').select_option
+OR
+
+
+   select “x", :from => "cobLabel"
+
+fill the ck editor
+
+   Author: koushanfilm
+Add this method to your code first then you can use it like this :
+
+
+
+
+
+
+fill_in_ckeditor 'audit_background', :with => 'This is my message!'
+maximize the broser screen
+
+   Author: koushanfilm
+    page.driver.browser.manage.window.maximize
+Click on list of the link on page
+
+   Author: koushanfilm
+    page.all(:link,"Classified BENFORD")[0].click
+
+
+Example :
+
+while x<=30
+      page.all(:link,"")[x].click
+      puts find(:xpath,"/html/body/div[2]/div[2]/div/div[2]/div[1]/div[1]/h2").text
+      x +=2
+      sleep(4)
+      page.evaluate_script('window.history.back()')
+      sleep(4)
+
+
+    end
+Go Back button
+
+   Author: koushanfilm
+  page.evaluate_script('window.history.back()')
+
+RSPC
+
+   Author: koushanfilm
+Yam is text based database library
+**********
+two ways of writing before;
+before :each do
+end
+which means before each test run this OR
+before :all do
+end
+which means run only once for all
+************
+--format nested
+ will show what test is running
+
+
+***********
+Check all your gem versions
+
+   Author: koushanfilm
+gem list —local
+
+# remove all old versions of the gem
+gem cleanup rjb
+
+# choose which ones you want to remove
+gem uninstall rjb
+
+# remove version 1.1.9 only
+gem uninstall rjb --version 1.1.9# remove all versions less than 1.3.4
+gem uninstall rjb --version '<1.3.4'

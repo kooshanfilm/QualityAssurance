@@ -1,0 +1,636 @@
+
+SSL public key and private
+
+cryptography:
+Methods of encryption:
+For example:
+HELLO > IFMMP > ROT-1 rotating each letters to the next letters
+another rotation is ROT-13 > URYYB
+one of the best ways of encrypting the string is the concept of KEY
+vigenere cipher:
+for example : HELLO  > KEY
+for example K=10 E=4   Y=24 if A=0
+now rotating each letter to key like rotating H by 10 E by 4 L by 24 and the L again by 10(K) and so on
+so after rotation will be RIJVS
+and to rotating it back you need to have the KEY and the value
+much better ways of encryption:
+PUBLIC KEY cryptography:
+is more similar to the vigenere cipher you need decrepit and encrypt the String you need to have the KEY
+the concept of the public key is when you have the string and the you encrypt your String based on the public key that you have and then you send your public key to the person to decrypt your String
+how to copy public key:
+pbcopy < ~/.ssh/id_rsa.pub
+Introduction to Selenium
+
+   Author: koushanfilm
+http://www.guru99.com/selenium-tutorial.html
+API and more
+
+   Author: koushanfilm
+What is API:
+    API is messenger that take a request and tells a system what you want to do
+    and return the response back to you.
+     For example think about it as a restaurant and you order a food kitchen is where
+    they prepare your food.There should be a messenger between your order and kitchen    which is waiter.
+    Waiter is messenger that take a your request and tells the kitchen what to do and       deliver the response back to you
+
+Serv
+
+   Author: koushanfilm
+Hello Mr/Mrs,
+
+
+My name is Koushan Rostamzadeh an ex employee of ACL and I am writing this email in regards to the decision which was made this Thursday, February 25th 2016 on terminating my partnership with the company.
+
+
+I am grateful for the time I have had  with the company and the experience I have gained through out my past two years working with my team.
+
+
+Since the decision was made so sudden with no probation period or warning, and also considering my time with ACL (more than two years), I talked  with lawyer and he mentioned that I should get at least 10-12 weeks instead of 8 weeks of salary now I was wondering if you could extend my package from 8 weeks to 10/12 weeks.
+
+
+Thank you so much for your time and consideration, and it has been my honour to be part of this company.
+
+
+Sincerely yours truly.
+
+Koushan Rostamzadeh.
+
+
+
+
+
+Qa testing
+
+Test case : how to be test it
+Test scenario: what to be tested
+Software Requirements Specification: A deliverable that describes all data, functional and behavioral requirements, all constraints, and all validation requirements for software/
+Stress Testing: Testing conducted to evaluate a system or component at or beyond the limits of its specified requirements to determine the load under which it fails and how. Often this isperformance testing using a very high level of simulated load.
+Hacking WebApplications
+
+types of security :
+XSS
+cross site request forgery
+
+
+
+
+
+security tool :netsparker , fiddler web debugger
+Selenium
+
+Unit test will test the Class level
+
+
+Basic Selenium :
+
+
+/ Twebdrive drive = new InternetExplorerDriver("@C:\\libraries\");
+// you need to run the server for IE
+
+
+Twebdrive drive = new FireFoxDriver();
+drive.ulr = "http://www.google.ca";
+
+
+var search_box = driver.findElement(by.id("google_field"))
+search_box.sendkeys("type_something")
+
+
+// go to image and click on the first image
+
+
+driver.Manager().Timeout().Implicitlywait(TimeSpan.FromSeconds(10));
+
+
+var imageLink = driver.findElement(By.ClassName("k1"))[0]
+imageLink.click();
+
+
+var ul = driver.findElement(By.ClassName("rg_ul"));
+var first_image_linke = ul.findElement(by.TagName("a")[0];
+
+
+driver.pagesource.contatis()
+
+
+
+
+
+
+
+Session
+
+when you open a page and all the data loads we say that connection is close and html is stateless
+bootstrap
+<script>location.href=‘http://www.google.ca';</script>
+Networking
+
+Network communication consists of layers :
+
+
+1-Application layer which is communicate throw http
+2-Transport layer which is communicating how the TCP
+     The layer underneath HTTP is a transport layer protocol. Almost all HTTP traffic travels over TCP (short for Transmission Control Protocol), although this isn't required by HTTP. When a user types a URL into the browser, the browser first extracts the host name from the URL (and port number, if any), and opens a TCP socket by specifying the server address (derived from the host name) and port (which defaults to 80).
+3-DHCP:Provides ip and submerse and etc.. to computer
+
+
+Hub and Switch:
+
+
+Server sends cookies to our computer in the http request header
+
+
+
+Extra note from anywhere
+
+Ways to optimize the site performance:
+1.Getrid of 404 errors since its a http request and http request makes sites slow
+2.insted of using images use svg files
+
+
+How to use TelNet
+
+
+telnet www.google.com 80
+
+
+GET / HTTP/1.1
+
+
+
+DNS
+
+Domain name service :
+* Translate IP address to the URLS and vice versa
+
+
+nslookup Facebook.com
+Server: 64.59.144.92
+
+Address: 64.59.144.92#53
+
+
+
+Non-authoritative answer:
+
+Name: acl.com
+Address: 198.74.57.213
+
+
+Definitions
+
+* TLD: Top Level Domain, for example ".com".
+* LDH Rule: Letters, digits, and hypeh. This is commonly referred to when naming domains and subdomains.
+* www.fb.com >> www== subdomain fb== domain com== tld
+Domain Name Formatting Rules
+
+* There are currently 326 different top level domains.
+* Domain names are read right to left: subdomain(s), domain, and TLD.
+* There can be up to 127 levels of a domain name.
+* The full domain name may be up to 253 characters and must use the ASCII character set.
+* The domain name must follow the LDH rule.
+* Domain names cannot start or end with a hyphen.
+
+
+* There are two kinds of DNS Name Servers: master and slave.
+* The master name server stores original copies of records.
+* Slave name servers get copies of the data and share load as well as improve availability.
+* Name servers answer questions to your DNS queries.
+
+
+Registrar DNS Hosting
+
+Registrar provided DNS can be a quick and easy solution for setting up your own DNS. Generally, registrar provided DNS is relatively basic and may not have the more advanced features of a DNS only provider. On the up side, registrar provided DNS services are generally free when you purchase a domain with a given registrar.
+DNS Hosting Services
+
+There are providers out there that can host your DNS for you, such as DNSimple, DNS Made Easy, andAmazon Web Services. One of the benefits of hosting your DNS with a provider that is separate from your registrar is that you will have less work to do should you ever decide to transfer your domain name from one registrar to another. Another benefit that DNS providers have recently started offering is templates for external services to your domains. These can be things like Google Apps, GitHub Pages, content delivery networks, and more. While this feature isn’t completely necessary, it can be a huge time saver. Some DNS providers, such as DNSimple, will also allow you to register domains with them.
+DNS Self Hosting
+
+
+
+Another option is hosting your own DNS server. There is software out there that can be used to manage and configure DNS. There are a ton of different programs that can be used to manage DNS, some being closed and some open source. The pros of hosting your own DNS is that you have complete control of every aspect of it. The cons of hosting your own DNS is that it can be quite difficult to set up and configure and you generally need to have at least two servers dedicated to the task, one being for backup.
+
+
+
+Jason and Curl
+
+   Author: koushanfilm
+Jason has key and value
+
+
+note curl is like a telnet that you can create a http request.
+
+
+Curl:
+curl is a tool to transfer data from or to a server, using one of the supported protocols(like HTTP) . The command is designed to work without user interaction.
+curl offers a busload of useful tricks like proxy support, user authentication, FTP upload, HTTP post, SSL connections, cookies, file transfer resume, Metalink, and more
+curl is an open source command line tool and library for transferring data with URL syntax.
+
+
+What's curl used for?
+
+
+curl is used in command lines or scripts to transfer data.
+
+
+
+Routers and Switches
+
+Routers : Routers connect multiple networks in order to move data from computer to computer.
+Switches :Switches physically connect local networks.
+Routing table :Determine the best route for a packet to go next on its way to its final destination.
+
+
+
+
+
+
+Cookie
+
+Pice of information that server can put on the computer and this helps the server to remember who you are
+
+
+example :
+
+
+you log in to Facebook and after hours of days you visit Facebook again and you still logged in
+
+
+a simple example for cookie is a digital stamp
+
+
+which is usually a very large string
+what does it mean to comply C source code
+
+Means to to turns into binary
+
+
+language like Python , Ruby and etc are not comply language it uses a interpreter
+Router
+
+Router will get the information from DNS and send it to the right place
+
+
+Also router will give very high probability of delivery
+
+
+TraceRoute:
+
+
+traceroute www.facebook.com > will give you a route between you and the Facebook
+traceroute
+
+traceroute   http://www.yahoo.com
+
+
+shows from point A to point B
+
+
+Koushan-R-MBP:~ koushan_rostamzadeh$ traceroute   http://www.yahoo.com
+traceroute to src.g03.yahoodns.net (98.137.236.150), 64 hops max, 52 byte packets
+ 1  192.168.151.254 (192.168.151.254)  3.836 ms  3.634 ms  3.175 ms
+ 2  192.168.5.253 (192.168.5.253)  1.618 ms  1.767 ms  1.662 ms
+ 3  ra2wh-ge4-1-13.vc.bigpipeinc.com.86.251.64.in-addr.arpa (64.251.86.45)  3.221 ms  2.858 ms  3.702 ms
+ 4  rc1st-tge0-0-0-1.vc.shawcable.net (66.163.68.221)  5.161 ms  3.698 ms  3.771 ms
+ 5  rd3bb-tge0-3-0-6.vc.shawcable.net (66.163.69.197)  5.250 ms
+    rd3bb-tge0-9-2-0.vc.shawcable.net (66.163.69.249)  4.413 ms
+    66.163.74.90 (66.163.74.90)  5.749 ms
+ 6  rc5wt-be5.wa.shawcable.net (66.163.74.158)  8.576 ms  8.022 ms  7.732 ms
+ 7  six.yahoo.com (206.81.80.98)  8.275 ms  7.711 ms  7.483 ms
+ 8  unknown-216-115-97-x.yahoo.com (216.115.97.107)  11.349 ms  11.981 ms  11.991 ms
+ 9  et-0-0-0.msr2.gq1.yahoo.com (66.196.67.109)  12.252 ms
+    et-0-0-0.msr1.gq1.yahoo.com (66.196.67.97)  12.802 ms  14.001 ms
+10  et-0-0-0.clr1-a-gdc.gq1.yahoo.com (67.195.37.69)  12.990 ms  12.191 ms
+    et-1-1-0.clr2-a-gdc.gq1.yahoo.com (67.195.37.75)  12.894 ms
+11  et-18-1.fab5-1-gdc.gq1.yahoo.com (67.195.1.235)  12.290 ms
+    et-17-25.fab4-1-gdc.gq1.yahoo.com (67.195.1.87)  13.235 ms
+    et-18-1.fab6-1-gdc.gq1.yahoo.com (67.195.1.239)  13.285 ms
+12  po-11.bas1-10-prd.gq1.yahoo.com (98.137.252.11)  14.465 ms
+    po-15.bas2-10-prd.gq1.yahoo.com (98.137.252.37)  12.291 ms
+    po-14.bas2-10-prd.gq1.yahoo.com (98.137.252.35)  12.331 ms
+13  w2.src.vip.gq1.yahoo.com (98.137.236.150)  12.785 ms  11.934 ms
+Netwerok  attacks
+
+* SQL injection for example username and password
+* Buffer attack
+* Section highjacking attack
+
+
+
+Ajax
+
+Ajax allows us to dynamically update a webpage’s content dynamically without reloading the page.
+
+
+meaning that for example from the page if you change something from the drop down menu the page will show the information without reloading the page.
+
+
+
+
+
+
+
+Document Object Model
+
+
+to get the document
+     go to the console:
+>console.dir(document)
+now to go the child node:
+
+
+
+MVC
+
+the MVC is the security for the model not letting the model to be accessed throw the user directly.
+Model:
+basically model is your database and all of your data lives there
+This is where important data for the site lives like username,password,logins
+you can update it,write to it and query,query the database
+
+
+
+
+View:
+page that user sees when they  requested information.for example after login to the website and usually the interaction with model.
+
+
+Controller:
+for example you fill the form and how that form process this  information is the controller.
+for example that request that PHP ask to the model
+
+user will never connect the model directly.
+
+
+one example of this is Error 404 >> “Forbidden” error
+when you see this perhaps this uses the MVC.
+
+
+how to change the permission of a file to make it accessible for public or not accessible
+
+
+CHMOD <PERMISSION> HELPERS.PHP
+
+
+two ways of changing permissions with chmod:
+1-octal numbers permissions:
+ex. chord 711 file
+
+
+first number >> 7 is that you can do
+second number is what the group can do
+3rd number is what the world can do
+
+the second was of chaining the permission is symbolic permissions:
+
+
+chimed a+x
+
+to get the file permission scheme:
+ls -l
+
+
+
+the first letter:
+the second and third and fourth : see the above
+D refere to the directory.
+- referees to the file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IP
+
+IP address :
+in order for your machine to identify itself on the internet it needs an address for example its like a postal code.
+this address helps to sends and receive information.
+
+
+ ip address >> W.X.Y.Z  each can have a vale in the range of [0,255]
+
+
+the old schema is IPV4 and new one is IPV6.
+
+
+
+
+DHCP:
+Dynamic Host Configuration Protocol server
+The role of this server is to assign IP address to devices.has a list of addresses that has IPs and gives you one.
+
+
+DNS:
+The domain name system help us translate the ip address to more memorable names that are easy for people to remember.this is more like a yellow page.
+
+
+For example 192.12.432.32  >> this s google.ca
+
+
+
+
+Access points:
+
+
+what is the job of router: router has the public  ip address and the devices that connect to the router lets say under the network has private address .Your computer will talk to the router.
+
+
+WANS: wide area networks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TCP/IP
+
+TCP:
+
+
+ports in the TCP :
+FTP uses port 21
+SMTP a mail app uses 25
+DNS 53
+HTTP 80
+HTTPS 443
+
+
+
+
+TCP/IP will split the data into packet and puts theme together at the destination
+if the data lost TCP will request the data again
+the direction that this packet go is written in the HEADER
+
+
+IP telles the data where to go and where to comeback
+every computer has its own ip address ,
+the ip protocol will use this to come back the date or route the tcp address
+
+
+note that TCP guarantee the delivery
+
+
+
+
+
+
+
+
+
+
+HTTP
+
+HTTP is a application layer protocol
+is a protocol how information is communicated from one machine to another machine
+
+
+GET / HTTP/1.1/HOST CATS.COM
+
+
+RESPOND:
+HTTP/1.1 200 OK  CONTENT : HTML
+
+
+status codes :
+
+
+200 ok  >>  success
+301 moved permanently >> redirection
+302 found >> page is now at a new location temporarily
+
+
+Client error:
+401 unauthorized  >> page typically requires login credentials
+
+
+403 forbidden server will not allow this request
+
+
+404 hot found server cannot find what was asked for
+
+
+Server error:
+500 internal server error >>  generic server failure in responding to the otherwise-valid request
+
+
+504 gateway time out
+
+
+internet protocols
+
+
+What is Scrum?
+
+What is Scrum?
+
+The Scrum methodology is an agile model consisting of a well-defined framework for carrying out software development in teams. This course, teaches the “who,” “what,” “when,” “where,” and “why” of Scrum.
+
+
+* Stakeholder is someone outside the Scrum team who has a say in what the product should be, such as a manager, client, or customer
+* Product Owner is the “voice of the customer” and is responsible for developing, maintaining, and prioritizing the items in the product backlog.
+* Scrum Master is responsible for making sure the work of the team goes smoothly by facilitating Scrum and removing impediments.
+* Development Team Members are the members of the team who write and test code.
+The Agile Manifesto
+
+The Agile Manifesto encourages teams to think about how to break down the silos that separate people working on a project, giving people formal roles and responsibilities and providing expectations for collaboration.
+
+
+Individuals and interactions over processes and tools
+Working software over comprehensive documentation
+Customer collaboration over contract negotiation
+Responding to change over following a plan
+The Waterfall Model
+
+A time-honored tradition in software development is to use a consistent sequence of stages to design, build, and test software. This sequential model is often called, “waterfall” because, like water flowing downstream, it is characterized by a process of irreversible flow from stage to stage from start to finish.
+Create a file with specific size on terminal
+
+head -c 1048576 </dev/urandom >myfile
+
+Cross site attack
+
+CSRF attack which is cross site request forgery
+
+
+XSS > as input I add a script in to the filed
+
+
+Good article about XSS:http://ttmm.io/tech/jquery-xss/
+
+
+For example, https://eamann.com/#"><img src=M onerror=alert('test');> would cause the page to post an alert of “test.” 1 Similarly, https://eamann.com/#"><img src=M onerror=window.location.replace('http://facebook.com');> would force the browser to automatically redirect to Facebook.
+How Client DSN Web server works
+
+
+Every web request starts with typing in or clicking something on the web. Often times you find what you need using a URL, but URLs can also be hidden behind hyperlinks. Included in a URL is a domain name. Domain names are really just catchy versions of IP addresses and domain name servers make the connection between domain names and IP addresses. Clients and servers are designed to talk to each other using the HTTP protocol, the common set of rules they've agreed to use.
+SQL
+
+   Author: koushanfilm
+structure query language :
+
+
+This is language to talk to database
+
+
+Examples
+
+
+SELECT * FROM ‘TABLE_NAME'
+
+
+DELETE FROM ‘TABLE_NAME’ WHERE FIELD_NAME=‘NAME'
+
+
+INSERT INTO ‘TABLE_NAME’ (FILED_NAME,FILED_NAME2) VALUE (‘YOUR_FIRST_VALUE,’YOUR_SECOND_VALUE)
+
+
+Data types in SQL:
+
+
+Char
+Varchar
+Int
+Bigint
+Decimal
+Datetime
+
+Appachi
+
+Apachi is web server software that has MYSQL that is database
+Domain Object Model
+
+
+Diffrent ports in internet
+
+* FTP (21)
+* HTTP (80)
+* SMPT(25)
+* DNS (53)
+* HTTPS (443)
+DHCP
+
+Dynamic host configuration protocol  :
+is a server that give your computer (dynamically) a unique address
